@@ -1,0 +1,10 @@
+{
+  "input": "unchanged primary per_mission.csv and aggregate metrics.csv",
+  "paired_mission_contrasts": 48,
+  "bootstrap_samples": 10000,
+  "seed": 2026,
+  "new_network_simulations": 0,
+  "exploratory": true,
+  "within_scenario_pairing": true,
+  "multiple_comparisons_adjusted": false
+}

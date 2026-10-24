@@ -50,6 +50,22 @@ There are 24 original LLM traces and 332 network simulations, not 332 independen
 
 The experiment is an open-loop network replay with one model and one latency scale, not a physical UAV flight or closed-loop controller. Different horizons use independently trained attackers. Fixed-size replay changes logical datagram sizes and can change fragmentation and delivered-frame timing; it is not payload-preserving padding. The prior top-three random selector does not by itself bound posterior successor predictability after observing traffic; see the theory erratum in the reproduction guide.
 
+## Extended evaluation
+
+Additional exploratory checks use the saved frames and add no network simulations:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python scripts/evaluate_feature_ablation.py
+python scripts/build_extended_results.py
+python scripts/verify_extended_results.py
+```
+
+`outputs/feature_ablation_20261024/` contains four attacker feature-access controls, with 48 held-out configuration/mask/mission scores. The masks are fixed in `plan.json`; both training and testing withhold the same columns. `size_blind` removes explicit size-derived features. `counts_timing` additionally removes fan-in/out and aggregate node-concentration features. Indirect size effects through the already simulated fragmentation and delivery can remain.
+
+`outputs/extended_analysis_20261024/` contains paired deployment contrasts and reproducible PNG/SVG figures. The 72 deployment/configuration/mission role comparisons reuse 24 original LLM traces; they are not 72 independent collections. Precision and recall plots use the original fixed threshold, not a threshold sweep. Energy plots show measured policies, not an estimated continuous Pareto frontier. Paired intervals are unadjusted exploratory summaries.
+
+The verification script independently recomputes all 28 new aggregate means/intervals, 28 feature-control bootstrap intervals and 48 deployment/metric bootstrap intervals. The core simulation source remains unchanged.
+
 ## Tests
 
 ```sh

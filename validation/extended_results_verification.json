@@ -1,0 +1,20 @@
+{
+  "feature_means_and_t_intervals_verified": 28,
+  "feature_paired_bootstrap_intervals_verified": 28,
+  "deployment_paired_bootstrap_intervals_verified": 48,
+  "new_network_simulations": 0,
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.1",
+    "platform": "macOS-26.5.2-arm64-arm-64bit"
+  },
+  "input_hashes": {
+    "outputs/feature_ablation_20261024/per_mission.csv": "f3b238852d4c75f5e4e3d32c82258e39edb206566a37bc0bf9a6361c50f2e8bb",
+    "outputs/feature_ablation_20261024/metrics.csv": "66778f0cee646c4c0cc019d5afdc276cdf7768207c9d12ad1d2935b81b12df31",
+    "outputs/feature_ablation_20261024/comparisons.csv": "3d2c01feaf78a26c48ea91329b19fc45ad55c116893de9094fec70b1d27216c1",
+    "outputs/extended_analysis_20261024/deployment_paired_comparisons.csv": "b9ea94b8f04d8f66baa14cb37451531bc797ead263e2d992f407bf7b5f2e30b2"
+  },
+  "scope": "Arithmetic, interval and pairing consistency; not an independent classifier implementation."
+}

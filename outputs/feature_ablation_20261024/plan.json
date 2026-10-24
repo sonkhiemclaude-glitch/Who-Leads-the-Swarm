@@ -1,0 +1,59 @@
+{
+  "design": "post-primary exploratory feature-access controls",
+  "configs": [
+    "none_b0",
+    "full_b0.2"
+  ],
+  "missions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "masks": {
+    "size_blind": {
+      "role": [
+        0,
+        2,
+        4,
+        5,
+        12,
+        13
+      ],
+      "window": [
+        0,
+        2,
+        9,
+        10,
+        11
+      ]
+    },
+    "counts_timing": {
+      "role": [
+        0,
+        2,
+        12,
+        13
+      ],
+      "window": [
+        0,
+        2,
+        9
+      ]
+    }
+  },
+  "folds": 4,
+  "seed": 2026,
+  "rf_trees": 200,
+  "hyperparameter_search": false,
+  "network_replay": false,
+  "notes": "Mask columns before training/testing; original frames and labels retained. These are group controls, not individual-feature importance."
+}
