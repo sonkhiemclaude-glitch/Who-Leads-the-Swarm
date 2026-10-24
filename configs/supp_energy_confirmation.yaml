@@ -1,0 +1,42 @@
+experiment:
+  name: supp_energy_confirmation
+  output_dir: outputs/paper_supplements_20261022/supp_energy_confirmation
+  seed: 2026
+  backend: ns3
+  jobs: 2
+data:
+  trace_source: llm
+  root: data/primary_qwen25_7b_v3
+  pattern: llm_n{n}_m{mission}.json
+llm:
+  endpoint: http://127.0.0.1:11434/v1
+  model: qwen2.5:7b
+  temperature: 0.7
+  max_tokens: 1536
+  latency_scale: 0.2
+  report_llm_prob: 1.0
+  timeout_s: 180
+  structured_outputs: true
+scenario:
+  n: 20
+  duration: 600
+  speed: 15
+  area: 800
+  mobility: gm
+  monitors: quad
+  routing: olsr
+grid:
+- defense: const
+  budget: 0.089541
+  missions:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+evaluation:
+  bootstrap: 10000
+  comparisons: []

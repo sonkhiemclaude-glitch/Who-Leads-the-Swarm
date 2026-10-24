@@ -1,0 +1,10 @@
+\begin{table}[htbp]\centering\small
+\caption{E1: leakage without defense (\%, mean $\pm$ 95\% CI over test missions). Heuristic: node with most transmitted bytes. Source: simulation output (backend=ns3, traces=llm).}
+\label{tab:e1}
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lcccccc@{}}\toprule
+Setting & Role (RF) & Role (heuristic) & Chance & Phase & Majority & Plan F1 \\\midrule
+OLSR, GM, 4 monitors & 99.9$\pm$0.3 & 14.4$\pm$3.5 & 5.0$\pm$0.0 & 71.8$\pm$5.0 & 48.7$\pm$4.3 & 87.9$\pm$3.8 \\
+AODV & 99.9$\pm$0.2 & 11.9$\pm$3.0 & 5.0$\pm$0.0 & 69.9$\pm$5.1 & 48.7$\pm$4.3 & 86.1$\pm$4.2 \\
+Group mobility (RPGM) & 100.0$\pm$0.0 & 23.1$\pm$3.8 & 5.0$\pm$0.0 & 69.7$\pm$11.1 & 48.7$\pm$4.3 & 88.8$\pm$8.1 \\
+One edge monitor & 44.4$\pm$8.1 & 3.2$\pm$2.2 & 5.0$\pm$0.0 & 54.6$\pm$7.5 & 48.7$\pm$4.3 & 56.5$\pm$5.2 \\
+\bottomrule\end{tabular}}\end{table}

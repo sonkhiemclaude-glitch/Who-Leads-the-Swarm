@@ -1,0 +1,6 @@
+a,b,metric,mean_diff,lo,hi,n,provenance_label
+full_b0.2_olsr_n20_v15_gm_quad,cover_uniform_b0.2_olsr_n20_v15_gm_quad,plan_f1,0.031411569862350226,-0.02077670979906944,0.08414534782448811,12,"simulation output (backend=ns3, traces=llm)"
+full_b0.2_olsr_n20_v15_gm_quad,const_b0.2_olsr_n20_v15_gm_quad,role_acc_h30,-0.528023598820059,-0.5840707964601769,-0.4638643067846607,12,"simulation output (backend=ns3, traces=llm)"
+full_b0.2_olsr_n20_v15_gm_quad,const_b0.2_olsr_n20_v15_gm_quad,phase_acc,0.03133903133903133,-0.018518518518518528,0.0811965811965812,12,"simulation output (backend=ns3, traces=llm)"
+full_b0.2_olsr_n20_v15_gm_quad,rot_b0_olsr_n20_v15_gm_quad,role_acc_h30,-0.009587020648967534,-0.03244837758112093,0.010324483775811235,12,"simulation output (backend=ns3, traces=llm)"
+full_b0.2_olsr_n20_v15_gm_quad,none_b0_olsr_n20_v15_gm_quad,pdr,-0.016601420863278638,-0.040493255408966464,0.009947570629948773,12,"simulation output (backend=ns3, traces=llm)"

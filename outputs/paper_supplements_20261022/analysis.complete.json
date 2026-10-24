@@ -1,0 +1,7 @@
+{
+  "energy_confirmation_missions": 8,
+  "alternative_attacker_configs": 5,
+  "fixed_size_runs": 24,
+  "scope": "post-primary exploratory robustness checks",
+  "hyperparameter_search": false
+}

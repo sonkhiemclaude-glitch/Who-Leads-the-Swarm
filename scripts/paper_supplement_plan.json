@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-22",
+  "status": "post-primary exploratory robustness checks, declared before supplementary outcomes",
+  "primary_immutable": "outputs/paper_primary_qwen25_7b_v3",
+  "fixed_size_ablation": {
+    "missions": [1,2,3,4,5,6,7,8,9,10,11,12],
+    "n": 20,
+    "treatment": "all logical message sizes set to the pooled N20 primary median; timestamps, endpoints, kinds and ground truth unchanged",
+    "defenses": ["none", "full B=0.2"],
+    "interpretation": "isolates size variability; does not remove inference jitter or establish LLM-specific causation"
+  },
+  "energy_matching": {
+    "calibration_missions": [1,2,3,4],
+    "constant_cover_budgets": [0.05,0.1,0.15],
+    "reference": "full B=1.0 measured incremental energy",
+    "selection": "piecewise linear interpolation in calibration mean energy, clipped to tested budget range; ignore leakage outcomes",
+    "confirmation_missions": [5,6,7,8,9,10,11,12],
+    "report": "actual confirmation energy mismatch, paired CIs; no claim of exact matching if mismatch exceeds 10 percent"
+  },
+  "alternative_attacker": {
+    "configs": ["none_b0", "rot_b0", "full_b0.2", "full_b1", "const_b0.2"],
+    "model": "HistGradientBoostingClassifier max_iter=150 max_leaf_nodes=31 l2_regularization=1 class_weight=balanced",
+    "history": "current and two previous windows, zero history before mission start, causal lags only",
+    "folds": "same mission-disjoint four folds; no hyperparameter search",
+    "interpretation": "alternative attacker with longer history; no guarantee it dominates RF"
+  },
+  "shared_resources": "existing idle gate; own container only, 2 CPUs, 12 GiB; no service restarts, model downloads or unrelated cleanup",
+  "submission": "no autonomous submission; author identity, declarations, repository release and author review remain required"
+}

@@ -1,0 +1,8 @@
+# Example: run the pipeline on the example traces in examples/synthetic_data (toy backend).
+# Synthetic smoke-test output, not a paper result.
+experiment: {name: example, output_dir: outputs/example, seed: 3, backend: toy}
+data: {trace_source: llm, root: examples/synthetic_data, pattern: "llm_n{n}_m{mission}.json"}
+scenario: {n: 5, duration: 120, area: 500}
+attack: {rf_trees: 10, folds: 2, horizons: [0, 10]}
+grid:
+  - {defense: none, missions: [1]}

@@ -1,0 +1,154 @@
+# Structured-output protocol v3: separate collection; no reuse of JSON-mode v2 traces.
+experiment:
+  name: paper_primary_qwen25_7b_v3
+  output_dir: outputs/paper_primary_qwen25_7b_v3
+  seed: 2026
+  backend: ns3
+  jobs: 2
+data:
+  trace_source: llm
+  root: data/primary_qwen25_7b_v3
+  pattern: llm_n{n}_m{mission}.json
+llm:
+  endpoint: http://127.0.0.1:11434/v1
+  model: qwen2.5:7b
+  temperature: 0.7
+  max_tokens: 1536
+  latency_scale: 0.2
+  report_llm_prob: 1.0
+  timeout_s: 180
+  structured_outputs: true
+scenario:
+  n: 20
+  duration: 600
+  speed: 15
+  area: 800
+  mobility: gm
+  monitors: quad
+  routing: olsr
+grid:
+- defense: none
+  n_missions: 12
+- defense: pad
+  n_missions: 12
+- defense: rot
+  n_missions: 12
+- defense: cover_uniform
+  budgets:
+  - 0.2
+  - 1.0
+  n_missions: 12
+- defense: cover_targeted
+  budgets:
+  - 0.2
+  - 1.0
+  n_missions: 12
+- defense: full
+  budgets:
+  - 0.05
+  - 0.2
+  - 1.0
+  n_missions: 12
+- defense: const
+  budgets:
+  - 0.2
+  - 1.0
+  n_missions: 12
+- defense: full_anyhop
+  budgets:
+  - 0.2
+  n_missions: 12
+- defense: none
+  n_missions: 12
+  scenario:
+    routing: aodv
+- defense: full
+  budgets:
+  - 0.2
+  n_missions: 12
+  scenario:
+    routing: aodv
+- defense: full_anyhop
+  budgets:
+  - 0.2
+  n_missions: 12
+  scenario:
+    routing: aodv
+- defense: none
+  n_missions: 12
+  scenario:
+    mobility: rpgm
+- defense: full
+  budgets:
+  - 0.2
+  n_missions: 12
+  scenario:
+    mobility: rpgm
+- defense: none
+  n_missions: 12
+  scenario:
+    monitors: edge
+- defense: full
+  budgets:
+  - 0.2
+  n_missions: 12
+  scenario:
+    monitors: edge
+- defense: none
+  n_missions: 6
+  scenario:
+    n: 10
+- defense: full
+  budgets:
+  - 0.2
+  n_missions: 6
+  scenario:
+    n: 10
+- defense: none
+  n_missions: 6
+  scenario:
+    n: 30
+- defense: full
+  budgets:
+  - 0.2
+  n_missions: 6
+  scenario:
+    n: 30
+- defense: none
+  n_missions: 6
+  scenario:
+    speed: 5
+- defense: full
+  budgets:
+  - 0.2
+  n_missions: 6
+  scenario:
+    speed: 5
+- defense: none
+  n_missions: 6
+  scenario:
+    speed: 25
+- defense: full
+  budgets:
+  - 0.2
+  n_missions: 6
+  scenario:
+    speed: 25
+evaluation:
+  bootstrap: 10000
+  comparisons:
+  - a: full_b0.2_olsr_n20_v15_gm_quad
+    b: cover_uniform_b0.2_olsr_n20_v15_gm_quad
+    metric: plan_f1
+  - a: full_b0.2_olsr_n20_v15_gm_quad
+    b: const_b0.2_olsr_n20_v15_gm_quad
+    metric: role_acc_h30
+  - a: full_b0.2_olsr_n20_v15_gm_quad
+    b: const_b0.2_olsr_n20_v15_gm_quad
+    metric: phase_acc
+  - a: full_b0.2_olsr_n20_v15_gm_quad
+    b: rot_b0_olsr_n20_v15_gm_quad
+    metric: role_acc_h30
+  - a: full_b0.2_olsr_n20_v15_gm_quad
+    b: none_b0_olsr_n20_v15_gm_quad
+    metric: pdr

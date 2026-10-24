@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swarmleak"
+version = "0.2.0"
+description = "Trace-driven measurement of traffic-pattern leakage and role-rotation defenses in LLM-agent UAV ad hoc networks"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "All rights reserved; no reuse licence is granted" }
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pandas>=2.0",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+sim = ["ns3==3.44.post0"]
+dev = ["pytest>=7.4", "ruff>=0.4", "mypy>=1.8", "types-PyYAML", "pandas-stubs"]
+
+[project.scripts]
+swarmleak = "swarmleak.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["ns3: needs ns-3 Python bindings (skipped when unavailable)", "slow: longer synthetic runs"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+extend-exclude = ["legacy"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E741", "B905"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = false
+exclude = ["legacy/"]

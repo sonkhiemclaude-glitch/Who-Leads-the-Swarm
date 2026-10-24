@@ -1,0 +1,37 @@
+# SYNTHETIC SMOKE TEST. Toy backend + surrogate workload. Outputs are
+# "synthetic smoke-test output, not a paper result". Runs in about a minute on a laptop.
+experiment:
+  name: synthetic_demo
+  output_dir: outputs/synthetic_demo
+  seed: 7
+  backend: toy
+  jobs: 1
+
+data:
+  trace_source: surrogate
+
+scenario:
+  n: 8
+  duration: 240
+  speed: 15
+  area: 600
+
+attack:
+  rf_trees: 50
+  folds: 2
+  horizons: [0, 10, 30]
+
+grid:
+  - {defense: none, missions: [1, 2, 3, 4]}
+  - {defense: pad, missions: [1, 2, 3, 4]}
+  - {defense: rot, missions: [1, 2, 3, 4]}
+  - {defense: cover_uniform, budgets: [0.2], missions: [1, 2, 3, 4]}
+  - {defense: cover_targeted, budgets: [0.2], missions: [1, 2, 3, 4]}
+  - {defense: full, budgets: [0.2], missions: [1, 2, 3, 4]}
+  - {defense: const, budgets: [0.2], missions: [1, 2, 3, 4]}
+
+evaluation:
+  bootstrap: 2000
+  comparisons:
+    - {a: full_b0.2_olsr_n8_v15_gm_quad, b: none_b0_olsr_n8_v15_gm_quad, metric: role_acc_h30}
+    - {a: full_b0.2_olsr_n8_v15_gm_quad, b: const_b0.2_olsr_n8_v15_gm_quad, metric: plan_f1}

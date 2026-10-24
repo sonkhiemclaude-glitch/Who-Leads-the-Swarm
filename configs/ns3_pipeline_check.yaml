@@ -1,0 +1,22 @@
+# Quick ns-3 installation check for the Mac Studio (about 2-5 minutes).
+# Uses MOCK LLM traces, so outputs are synthetic smoke-test outputs, not paper results.
+experiment:
+  name: ns3_pipeline_check
+  output_dir: outputs/ns3_pipeline_check
+  seed: 11
+  backend: ns3
+  jobs: 2
+
+data:
+  trace_source: llm_mock
+
+scenario: {n: 10, duration: 180, speed: 15, area: 800}
+
+attack: {rf_trees: 50, folds: 2}
+
+grid:
+  - {defense: none, missions: [1, 2, 3, 4]}
+  - {defense: full, budgets: [0.2], missions: [1, 2, 3, 4]}
+
+evaluation:
+  bootstrap: 1000

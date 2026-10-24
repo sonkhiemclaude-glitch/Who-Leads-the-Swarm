@@ -1,0 +1,22 @@
+\begin{table}[htbp]\centering\small
+\caption{E4: cost to mission traffic. PDR (\%), latency (ms), broadcast frames observed by the monitors per second, and airtime share of cover traffic per node (\%). Source: simulation output (backend=ns3, traces=llm).}
+\label{tab:e4}
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lccccc@{}}\toprule
+Configuration & PDR & Latency median & Latency p95 & Broadcast fps & Cover airtime \\\midrule
+No defense (OLSR) & 78.1$\pm$3.4 & 0.8$\pm$0.0 & 7.9$\pm$1.2 & 12.6$\pm$0.3 & 0.00$\pm$0.00 \\
+Fixed padding (OLSR) & 77.9$\pm$3.3 & 1.6$\pm$0.0 & 9.7$\pm$1.2 & 12.6$\pm$0.4 & 0.00$\pm$0.00 \\
+Rotation only (OLSR) & 74.6$\pm$3.3 & 0.8$\pm$0.0 & 8.6$\pm$0.5 & 12.8$\pm$0.3 & 0.00$\pm$0.00 \\
+Uniform cover, $B$=0.2 (OLSR) & 78.9$\pm$3.2 & 0.8$\pm$0.0 & 2.4$\pm$0.2 & 12.6$\pm$0.3 & 0.04$\pm$0.01 \\
+Uniform cover, $B$=1 (OLSR) & 78.9$\pm$3.3 & 0.8$\pm$0.0 & 2.3$\pm$0.2 & 12.5$\pm$0.3 & 0.16$\pm$0.01 \\
+Targeted cover, $B$=0.2 (OLSR) & 78.8$\pm$3.3 & 0.8$\pm$0.0 & 2.7$\pm$0.3 & 12.6$\pm$0.3 & 0.03$\pm$0.00 \\
+Targeted cover, $B$=1 (OLSR) & 78.7$\pm$3.3 & 0.8$\pm$0.0 & 2.4$\pm$0.2 & 12.5$\pm$0.3 & 0.08$\pm$0.01 \\
+Full protocol, $B$=0.05 (OLSR) & 75.6$\pm$3.2 & 0.8$\pm$0.0 & 3.9$\pm$0.6 & 12.7$\pm$0.3 & 0.01$\pm$0.00 \\
+Full protocol, $B$=0.2 (OLSR) & 76.5$\pm$3.2 & 0.8$\pm$0.0 & 2.9$\pm$0.3 & 12.6$\pm$0.3 & 0.03$\pm$0.00 \\
+Full protocol, $B$=1 (OLSR) & 77.4$\pm$2.8 & 0.8$\pm$0.0 & 2.4$\pm$0.1 & 12.5$\pm$0.3 & 0.07$\pm$0.01 \\
+Padding + constant-rate cover, $B$=0.2 (OLSR) & 78.7$\pm$3.1 & 1.6$\pm$0.0 & 4.9$\pm$0.5 & 12.6$\pm$0.3 & 0.07$\pm$0.00 \\
+Padding + constant-rate cover, $B$=1 (OLSR) & 79.0$\pm$3.3 & 1.6$\pm$0.1 & 4.9$\pm$0.5 & 12.4$\pm$0.3 & 0.36$\pm$0.00 \\
+Full, any-hop cover, $B$=0.2 (OLSR) & 75.3$\pm$2.8 & 0.8$\pm$0.0 & 2.5$\pm$0.2 & 13.0$\pm$0.3 & 0.04$\pm$0.00 \\
+No defense (AODV) & 92.6$\pm$1.4 & 1.0$\pm$0.2 & 18.0$\pm$1.8 & 23.2$\pm$0.8 & 0.00$\pm$0.00 \\
+Full protocol, $B$=0.2 (AODV) & 92.7$\pm$1.0 & 1.0$\pm$0.1 & 18.4$\pm$1.2 & 30.2$\pm$1.5 & 0.03$\pm$0.00 \\
+Full, any-hop cover, $B$=0.2 (AODV) & 92.9$\pm$0.8 & 1.2$\pm$0.2 & 64.5$\pm$101.2 & 50.1$\pm$2.8 & 0.04$\pm$0.00 \\
+\bottomrule\end{tabular}}\end{table}

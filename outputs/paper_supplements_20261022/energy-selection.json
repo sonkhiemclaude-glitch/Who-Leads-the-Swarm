@@ -1,0 +1,54 @@
+{
+  "calibration_missions": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "confirmation_missions": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "target_full_b1_energy_j": 0.7442574334803795,
+  "calibration": [
+    {
+      "budget": 0.05,
+      "mean_energy": 0.6169283845021709,
+      "per_mission_energy": [
+        0.7962846618647745,
+        0.5947716262075119,
+        0.5598276864526269,
+        0.5168295634837705
+      ]
+    },
+    {
+      "budget": 0.1,
+      "mean_energy": 0.7779378785116933,
+      "per_mission_energy": [
+        0.912041910537664,
+        0.7531895220905426,
+        0.7446913805826625,
+        0.7018287008359039
+      ]
+    },
+    {
+      "budget": 0.15,
+      "mean_energy": 0.9395331384550446,
+      "per_mission_energy": [
+        1.0323735396341363,
+        0.930079509519419,
+        0.9184568419972493,
+        0.8772226626693737
+      ]
+    }
+  ],
+  "frozen_const_budget": 0.089541,
+  "clipped_to_calibration_range": false,
+  "selection_uses_leakage": false
+}

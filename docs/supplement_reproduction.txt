@@ -1,0 +1,51 @@
+Reproducing the completed experiments
+
+The main evaluation is stored under outputs/paper_primary_qwen25_7b_v3.
+Supplementary outputs are under outputs/paper_supplements_20261022.
+Raw model-call logs and original completed traces are available under
+ data/primary_qwen25_7b_v3; size-control traces are separate derived inputs.
+
+Replaying the saved traces is reproducible; sampling the model again need not
+produce identical traces. The scripts never use a parametric surrogate as a
+replacement for a missing original trace.
+
+Environment: Python >=3.11, Linux x86_64, ns3==3.44.post0 with its matching cppyy.
+The primary provenance.json records the actual library versions. The Linux
+freeze file is a historical environment record; inspect local editable paths
+before using it as an installation specification. A normal installation is:
+ python -m pip install -e '.[sim]'
+Pin analysis libraries to the recorded versions when exact replication matters.
+
+From the research package root:
+ python -m swarmleak.cli preflight --config configs/mac_studio_structured_v3.yaml --stage simulate
+ python -m swarmleak.cli simulate --config configs/mac_studio_structured_v3.yaml --jobs 2
+ python -m swarmleak.cli evaluate --config configs/mac_studio_structured_v3.yaml
+ python scripts/run_experiment.py --config configs/mac_studio_structured_v3.yaml --stage tables
+
+Existing validated simulations are reused; deleting runs is not necessary for
+analysis replay. To rerun simulations independently, direct a copied config to
+a new output directory, preserving seeds/traces and reporting that new config.
+
+Supplementary analysis:
+ python scripts/prepare_paper_supplements.py
+ python -m swarmleak.cli simulate --config configs/supp_energy_calibration.yaml --jobs 2
+ python scripts/select_energy_match.py
+ python -m swarmleak.cli simulate --config configs/supp_energy_confirmation.yaml --jobs 2
+ python -m swarmleak.cli simulate --config configs/supp_size_control.yaml --jobs 2
+ python -m swarmleak.cli evaluate --config configs/supp_size_control.yaml
+ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python scripts/evaluate_paper_supplements.py
+
+The energy budget is chosen using missions 1–4 and energy only. Confirmation
+uses missions 5–12. Do not retune using confirmation leakage. An energy mismatch
+must be reported, even when the calibration target was met.
+The size treatment sets all logical sizes to the pooled median, retaining
+original timing/endpoints/kinds. It is a controlled replay ablation, not a
+second model collection. The history attacker uses only past windows and
+mission-disjoint folds; it is an alternative, not an assumed upper bound.
+
+Theory erratum for the frozen source snapshot: the rotation.py docstring's
+p_max <=1/3 statement concerns prior random selection. A conditional bound after
+observing traffic requires an additional assumption, as clarified in the revised
+manuscript. The selector implementation is unchanged; no simulation is altered
+by this correction to the interpretation.
+

@@ -1,0 +1,76 @@
+# Reference of every config key with the paper's values (Table 2, Sections 4-6).
+# Copy it and change only what you need. Unknown keys are rejected.
+experiment:
+  name: default
+  output_dir: outputs/default
+  seed: 2026            # base seed; every random stream is derived from it (utils/random.py)
+  backend: toy          # toy (tests only) | ns3 (paper)
+  jobs: 1               # parallel processes (ns3: one simulator per process)
+
+data:
+  trace_source: surrogate   # surrogate (synthetic) | llm (real traces in data.root) | llm_mock (synthetic)
+  root: null                # directory of real LLM traces, e.g. data/traces (required for llm)
+  pattern: "llm_n{n}_m{mission}.json"
+
+llm:                        # only used by `swarmleak gen-traces`
+  endpoint: null            # e.g. http://localhost:11434/v1 (Ollama) - set on the Mac Studio
+  model: null               # model tag served by the endpoint
+  temperature: 0.7
+  max_tokens: 400
+  latency_scale: 0.2        # lambda, Section 4.1
+  report_llm_prob: 1.0
+  timeout_s: 120
+
+scenario:
+  n: 20
+  duration: 600
+  speed: 15
+  area: 800
+  altitude: [50, 150]
+  mobility: gm              # gm | rpgm
+  monitors: quad            # quad (4 monitors) | edge (1 airborne edge monitor)
+  routing: olsr             # olsr | aodv
+  warmup_s: 10
+  tx_power_dbm: 20
+  loss_exponent: 2.2
+  mtu_b: 1500
+
+protocol:
+  range_est_m: 250
+  rotation_delay_s: [4, 20]
+  rotation_top_k: 3
+  size_profile_b: {plan: 900, ack: 260, report: 600}
+  size_memory_min: 5
+  burst_gap_s: [0.02, 0.15]
+  ack_delay_s: [0.2, 1.0]
+  decoy_delivery_s: 0.05
+  decoy_start_s: [0.3, 2.5]
+  n_cotimed_decoys: 2
+  targeted_shares: {cotimed: 0.4, spread: 0.3, mirror: 0.3}
+  bucket_capacity: 25
+  bucket_rate_hz: 3
+  link_gap_s: 0.5
+  pad_chunk_b: 1024
+  const_size_b: 1024
+
+attack:
+  role_window: [10, 5]
+  phase_window: [20, 5]
+  plan_window: [4, 1]
+  horizons: [0, 10, 30]
+  plan_tolerance_s: 5
+  plan_threshold: 0.5
+  plan_merge_s: 3
+  rf_trees: 200
+  rf_min_leaf: 2
+  folds: 4
+  n_jobs: 1
+
+toy: {}                     # toy-backend options: link_range_m, monitor_range_m, hop_loss
+
+grid:
+  - {defense: none, n_missions: 12}
+
+evaluation:
+  bootstrap: 10000
+  comparisons: []           # e.g. {a: full_b0.2_olsr_n20_v15_gm_quad, b: const_b0.2_olsr_n20_v15_gm_quad, metric: role_acc_h30}

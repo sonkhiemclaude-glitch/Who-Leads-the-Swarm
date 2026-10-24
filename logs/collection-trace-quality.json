@@ -1,0 +1,1106 @@
+[
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n10_m1.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 10,
+    "duration": 600.0,
+    "messages": 1447,
+    "plan_changes": 11,
+    "model_calls": 1246,
+    "call_latency_s_median": 0.3004572285572067,
+    "finish_reasons": {
+      "stop": 1246
+    },
+    "by_kind": {
+      "ack": {
+        "count": 99,
+        "size_bytes_median": 287.0,
+        "size_bytes_p95": 287.0,
+        "iat_s_median": 0.11616764575009597
+      },
+      "plan": {
+        "count": 99,
+        "size_bytes_median": 364.0,
+        "size_bytes_p95": 395.1,
+        "iat_s_median": 0.08142855951854244
+      },
+      "report": {
+        "count": 1221,
+        "size_bytes_median": 404.0,
+        "size_bytes_p95": 476.0,
+        "iat_s_median": 0.291919628434556
+      },
+      "tool_call": {
+        "count": 14,
+        "size_bytes_median": 328.0,
+        "size_bytes_p95": 328.0,
+        "iat_s_median": 8.26581910932498
+      },
+      "tool_result": {
+        "count": 14,
+        "size_bytes_median": 521.0,
+        "size_bytes_p95": 672.7499999999999,
+        "iat_s_median": 8.209002442751625
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n10_m2.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 10,
+    "duration": 600.0,
+    "messages": 1332,
+    "plan_changes": 23,
+    "model_calls": 906,
+    "call_latency_s_median": 0.3202697084052488,
+    "finish_reasons": {
+      "stop": 906
+    },
+    "by_kind": {
+      "ack": {
+        "count": 207,
+        "size_bytes_median": 287.0,
+        "size_bytes_p95": 287.0,
+        "iat_s_median": 0.11577832680251277
+      },
+      "plan": {
+        "count": 207,
+        "size_bytes_median": 357.0,
+        "size_bytes_p95": 381.4,
+        "iat_s_median": 0.0942537248126456
+      },
+      "report": {
+        "count": 848,
+        "size_bytes_median": 413.0,
+        "size_bytes_p95": 486.0,
+        "iat_s_median": 0.45616102402573233
+      },
+      "tool_call": {
+        "count": 35,
+        "size_bytes_median": 327.0,
+        "size_bytes_p95": 328.0,
+        "iat_s_median": 4.334054433235892
+      },
+      "tool_result": {
+        "count": 35,
+        "size_bytes_median": 545.0,
+        "size_bytes_p95": 659.5999999999999,
+        "iat_s_median": 4.361296748639205
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n10_m3.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 10,
+    "duration": 600.0,
+    "messages": 1185,
+    "plan_changes": 10,
+    "model_calls": 1002,
+    "call_latency_s_median": 0.32387866638600826,
+    "finish_reasons": {
+      "stop": 1002
+    },
+    "by_kind": {
+      "ack": {
+        "count": 90,
+        "size_bytes_median": 287.0,
+        "size_bytes_p95": 287.0,
+        "iat_s_median": 0.10566581505355543
+      },
+      "plan": {
+        "count": 90,
+        "size_bytes_median": 364.0,
+        "size_bytes_p95": 381.0,
+        "iat_s_median": 0.08675456144013083
+      },
+      "report": {
+        "count": 979,
+        "size_bytes_median": 410.0,
+        "size_bytes_p95": 503.0999999999999,
+        "iat_s_median": 0.33858770805282745
+      },
+      "tool_call": {
+        "count": 13,
+        "size_bytes_median": 327.0,
+        "size_bytes_p95": 327.4,
+        "iat_s_median": 9.353781651074641
+      },
+      "tool_result": {
+        "count": 13,
+        "size_bytes_median": 545.0,
+        "size_bytes_p95": 821.7999999999997,
+        "iat_s_median": 9.348399113488966
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n10_m4.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 10,
+    "duration": 600.0,
+    "messages": 1153,
+    "plan_changes": 14,
+    "model_calls": 897,
+    "call_latency_s_median": 0.31190100009553134,
+    "finish_reasons": {
+      "stop": 897
+    },
+    "by_kind": {
+      "ack": {
+        "count": 126,
+        "size_bytes_median": 287.0,
+        "size_bytes_p95": 287.0,
+        "iat_s_median": 0.08516151756776935
+      },
+      "plan": {
+        "count": 126,
+        "size_bytes_median": 362.0,
+        "size_bytes_p95": 381.5,
+        "iat_s_median": 0.10009659568845564
+      },
+      "report": {
+        "count": 865,
+        "size_bytes_median": 411.0,
+        "size_bytes_p95": 492.0,
+        "iat_s_median": 0.45550841623010285
+      },
+      "tool_call": {
+        "count": 18,
+        "size_bytes_median": 327.0,
+        "size_bytes_p95": 329.0,
+        "iat_s_median": 6.742457432459275
+      },
+      "tool_result": {
+        "count": 18,
+        "size_bytes_median": 534.0,
+        "size_bytes_p95": 676.7499999999999,
+        "iat_s_median": 6.727129574093169
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n10_m5.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 10,
+    "duration": 600.0,
+    "messages": 1517,
+    "plan_changes": 13,
+    "model_calls": 1243,
+    "call_latency_s_median": 0.31931479182094336,
+    "finish_reasons": {
+      "stop": 1243
+    },
+    "by_kind": {
+      "ack": {
+        "count": 117,
+        "size_bytes_median": 287.0,
+        "size_bytes_p95": 287.0,
+        "iat_s_median": 0.11638059284022972
+      },
+      "plan": {
+        "count": 117,
+        "size_bytes_median": 359.0,
+        "size_bytes_p95": 377.2,
+        "iat_s_median": 0.08058737586522113
+      },
+      "report": {
+        "count": 1177,
+        "size_bytes_median": 419.0,
+        "size_bytes_p95": 498.20000000000005,
+        "iat_s_median": 0.3391292776294108
+      },
+      "tool_call": {
+        "count": 53,
+        "size_bytes_median": 327.0,
+        "size_bytes_p95": 328.0,
+        "iat_s_median": 6.630794371953229
+      },
+      "tool_result": {
+        "count": 53,
+        "size_bytes_median": 521.0,
+        "size_bytes_p95": 693.5999999999999,
+        "iat_s_median": 6.63071391046714
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n10_m6.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 10,
+    "duration": 600.0,
+    "messages": 1171,
+    "plan_changes": 16,
+    "model_calls": 870,
+    "call_latency_s_median": 0.33021860395092517,
+    "finish_reasons": {
+      "stop": 870
+    },
+    "by_kind": {
+      "ack": {
+        "count": 144,
+        "size_bytes_median": 287.0,
+        "size_bytes_p95": 287.0,
+        "iat_s_median": 0.112902526789469
+      },
+      "plan": {
+        "count": 144,
+        "size_bytes_median": 361.5,
+        "size_bytes_p95": 377.0,
+        "iat_s_median": 0.09469454217228279
+      },
+      "report": {
+        "count": 825,
+        "size_bytes_median": 422.0,
+        "size_bytes_p95": 503.79999999999995,
+        "iat_s_median": 0.46899241407272996
+      },
+      "tool_call": {
+        "count": 29,
+        "size_bytes_median": 328.0,
+        "size_bytes_p95": 328.0,
+        "iat_s_median": 10.59693363145766
+      },
+      "tool_result": {
+        "count": 29,
+        "size_bytes_median": 519.0,
+        "size_bytes_p95": 688.0,
+        "iat_s_median": 10.547010252134214
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m1.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 3354,
+    "plan_changes": 17,
+    "model_calls": 2638,
+    "call_latency_s_median": 0.32224597851745784,
+    "finish_reasons": {
+      "stop": 2638
+    },
+    "by_kind": {
+      "ack": {
+        "count": 323,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.08929602565884187
+      },
+      "plan": {
+        "count": 323,
+        "size_bytes_median": 365.0,
+        "size_bytes_p95": 403.9999999999998,
+        "iat_s_median": 0.08927024218280621
+      },
+      "report": {
+        "count": 2534,
+        "size_bytes_median": 418.5,
+        "size_bytes_p95": 507.3499999999999,
+        "iat_s_median": 0.1263009180664767
+      },
+      "tool_call": {
+        "count": 87,
+        "size_bytes_median": 328.0,
+        "size_bytes_p95": 329.0,
+        "iat_s_median": 2.355532504283019
+      },
+      "tool_result": {
+        "count": 87,
+        "size_bytes_median": 539.0,
+        "size_bytes_p95": 695.8,
+        "iat_s_median": 2.3342723110105084
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m10.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 2373,
+    "plan_changes": 16,
+    "model_calls": 1701,
+    "call_latency_s_median": 0.32240149984136224,
+    "finish_reasons": {
+      "stop": 1701
+    },
+    "by_kind": {
+      "ack": {
+        "count": 304,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.07028444180647853
+      },
+      "plan": {
+        "count": 304,
+        "size_bytes_median": 364.0,
+        "size_bytes_p95": 390.84999999999997,
+        "iat_s_median": 0.08235514747133266
+      },
+      "report": {
+        "count": 1605,
+        "size_bytes_median": 412.0,
+        "size_bytes_p95": 498.79999999999995,
+        "iat_s_median": 0.2558807617122767
+      },
+      "tool_call": {
+        "count": 80,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 330.0,
+        "iat_s_median": 3.4029026009614824
+      },
+      "tool_result": {
+        "count": 80,
+        "size_bytes_median": 549.0,
+        "size_bytes_p95": 762.9999999999998,
+        "iat_s_median": 3.361692600744533
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m11.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 3082,
+    "plan_changes": 15,
+    "model_calls": 2483,
+    "call_latency_s_median": 0.3194612499792129,
+    "finish_reasons": {
+      "stop": 2483
+    },
+    "by_kind": {
+      "ack": {
+        "count": 285,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.07080084199489534
+      },
+      "plan": {
+        "count": 285,
+        "size_bytes_median": 365.0,
+        "size_bytes_p95": 385.0,
+        "iat_s_median": 0.08298112788781964
+      },
+      "report": {
+        "count": 2424,
+        "size_bytes_median": 418.0,
+        "size_bytes_p95": 498.8499999999999,
+        "iat_s_median": 0.1568225908425802
+      },
+      "tool_call": {
+        "count": 44,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 330.0,
+        "iat_s_median": 2.00085768903449
+      },
+      "tool_result": {
+        "count": 44,
+        "size_bytes_median": 530.5,
+        "size_bytes_p95": 742.6,
+        "iat_s_median": 1.9772526640336423
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m12.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 2596,
+    "plan_changes": 12,
+    "model_calls": 2136,
+    "call_latency_s_median": 0.3136852290481329,
+    "finish_reasons": {
+      "stop": 2136
+    },
+    "by_kind": {
+      "ack": {
+        "count": 228,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.08484858922957983
+      },
+      "plan": {
+        "count": 228,
+        "size_bytes_median": 369.0,
+        "size_bytes_p95": 392.0,
+        "iat_s_median": 0.09549841504320966
+      },
+      "report": {
+        "count": 2108,
+        "size_bytes_median": 414.0,
+        "size_bytes_p95": 475.0,
+        "iat_s_median": 0.151668876343388
+      },
+      "tool_call": {
+        "count": 16,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 331.0,
+        "iat_s_median": 5.1743743348915245
+      },
+      "tool_result": {
+        "count": 16,
+        "size_bytes_median": 520.0,
+        "size_bytes_p95": 667.5,
+        "iat_s_median": 5.088893234688044
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m2.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 2024,
+    "plan_changes": 17,
+    "model_calls": 1345,
+    "call_latency_s_median": 0.3299009168986231,
+    "finish_reasons": {
+      "stop": 1345
+    },
+    "by_kind": {
+      "ack": {
+        "count": 323,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.07809060531722878
+      },
+      "plan": {
+        "count": 323,
+        "size_bytes_median": 364.0,
+        "size_bytes_p95": 388.9,
+        "iat_s_median": 0.08729441133067439
+      },
+      "report": {
+        "count": 1278,
+        "size_bytes_median": 416.5,
+        "size_bytes_p95": 509.14999999999986,
+        "iat_s_median": 0.292184638645665
+      },
+      "tool_call": {
+        "count": 50,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 331.0,
+        "iat_s_median": 6.026286702647951
+      },
+      "tool_result": {
+        "count": 50,
+        "size_bytes_median": 537.5,
+        "size_bytes_p95": 683.1,
+        "iat_s_median": 6.012839361045678
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m3.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 2615,
+    "plan_changes": 17,
+    "model_calls": 1929,
+    "call_latency_s_median": 0.30813970789313316,
+    "finish_reasons": {
+      "stop": 1929
+    },
+    "by_kind": {
+      "ack": {
+        "count": 323,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.07823146464191288
+      },
+      "plan": {
+        "count": 323,
+        "size_bytes_median": 357.0,
+        "size_bytes_p95": 392.69999999999993,
+        "iat_s_median": 0.08481808088122023
+      },
+      "report": {
+        "count": 1855,
+        "size_bytes_median": 408.0,
+        "size_bytes_p95": 485.0,
+        "iat_s_median": 0.22795737188610588
+      },
+      "tool_call": {
+        "count": 57,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 330.0,
+        "iat_s_median": 3.103024886191747
+      },
+      "tool_result": {
+        "count": 57,
+        "size_bytes_median": 537.0,
+        "size_bytes_p95": 672.3999999999999,
+        "iat_s_median": 3.132530686275004
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m4.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 2287,
+    "plan_changes": 19,
+    "model_calls": 1513,
+    "call_latency_s_median": 0.33233883301727474,
+    "finish_reasons": {
+      "stop": 1513
+    },
+    "by_kind": {
+      "ack": {
+        "count": 361,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.07228735670030773
+      },
+      "plan": {
+        "count": 361,
+        "size_bytes_median": 364.0,
+        "size_bytes_p95": 386.0,
+        "iat_s_median": 0.08645788053246406
+      },
+      "report": {
+        "count": 1423,
+        "size_bytes_median": 419.0,
+        "size_bytes_p95": 513.0,
+        "iat_s_median": 0.26118133694473045
+      },
+      "tool_call": {
+        "count": 71,
+        "size_bytes_median": 328.0,
+        "size_bytes_p95": 329.0,
+        "iat_s_median": 2.962016294511699
+      },
+      "tool_result": {
+        "count": 71,
+        "size_bytes_median": 560.0,
+        "size_bytes_p95": 686.0,
+        "iat_s_median": 2.943612511420355
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m5.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 1752,
+    "plan_changes": 13,
+    "model_calls": 1234,
+    "call_latency_s_median": 0.32968472910579294,
+    "finish_reasons": {
+      "stop": 1234
+    },
+    "by_kind": {
+      "ack": {
+        "count": 247,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.08205347759164283
+      },
+      "plan": {
+        "count": 247,
+        "size_bytes_median": 367.0,
+        "size_bytes_p95": 387.7,
+        "iat_s_median": 0.0935014246413175
+      },
+      "report": {
+        "count": 1184,
+        "size_bytes_median": 416.0,
+        "size_bytes_p95": 514.8499999999999,
+        "iat_s_median": 0.32275459381162364
+      },
+      "tool_call": {
+        "count": 37,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 330.0,
+        "iat_s_median": 9.57780661086609
+      },
+      "tool_result": {
+        "count": 37,
+        "size_bytes_median": 536.0,
+        "size_bytes_p95": 752.3999999999993,
+        "iat_s_median": 9.611684890563012
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m6.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 2134,
+    "plan_changes": 9,
+    "model_calls": 1762,
+    "call_latency_s_median": 0.31363710400182754,
+    "finish_reasons": {
+      "stop": 1762
+    },
+    "by_kind": {
+      "ack": {
+        "count": 171,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.07149741794697206
+      },
+      "plan": {
+        "count": 171,
+        "size_bytes_median": 355.0,
+        "size_bytes_p95": 378.5,
+        "iat_s_median": 0.08742525044351823
+      },
+      "report": {
+        "count": 1714,
+        "size_bytes_median": 413.0,
+        "size_bytes_p95": 508.3499999999999,
+        "iat_s_median": 0.22320359659465794
+      },
+      "tool_call": {
+        "count": 39,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 330.0,
+        "iat_s_median": 7.533954074807397
+      },
+      "tool_result": {
+        "count": 39,
+        "size_bytes_median": 522.0,
+        "size_bytes_p95": 686.5,
+        "iat_s_median": 7.481763066482657
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m7.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 1919,
+    "plan_changes": 8,
+    "model_calls": 1596,
+    "call_latency_s_median": 0.30776093748863786,
+    "finish_reasons": {
+      "stop": 1596
+    },
+    "by_kind": {
+      "ack": {
+        "count": 152,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.0817186767846323
+      },
+      "plan": {
+        "count": 152,
+        "size_bytes_median": 369.0,
+        "size_bytes_p95": 380.45,
+        "iat_s_median": 0.09705355224366485
+      },
+      "report": {
+        "count": 1561,
+        "size_bytes_median": 411.0,
+        "size_bytes_p95": 497.0,
+        "iat_s_median": 0.20763835789689722
+      },
+      "tool_call": {
+        "count": 27,
+        "size_bytes_median": 328.0,
+        "size_bytes_p95": 329.7,
+        "iat_s_median": 7.47677323040417
+      },
+      "tool_result": {
+        "count": 27,
+        "size_bytes_median": 548.0,
+        "size_bytes_p95": 663.7,
+        "iat_s_median": 7.495031405425195
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m8.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 2462,
+    "plan_changes": 14,
+    "model_calls": 1905,
+    "call_latency_s_median": 0.3165252909529954,
+    "finish_reasons": {
+      "stop": 1905
+    },
+    "by_kind": {
+      "ack": {
+        "count": 266,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.08122585399524951
+      },
+      "plan": {
+        "count": 266,
+        "size_bytes_median": 364.0,
+        "size_bytes_p95": 384.75,
+        "iat_s_median": 0.09416443162348287
+      },
+      "report": {
+        "count": 1852,
+        "size_bytes_median": 409.0,
+        "size_bytes_p95": 483.0,
+        "iat_s_median": 0.2008024116958893
+      },
+      "tool_call": {
+        "count": 39,
+        "size_bytes_median": 328.0,
+        "size_bytes_p95": 329.0,
+        "iat_s_median": 6.907368652443353
+      },
+      "tool_result": {
+        "count": 39,
+        "size_bytes_median": 542.0,
+        "size_bytes_p95": 759.0,
+        "iat_s_median": 6.92995718993707
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n20_m9.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 20,
+    "duration": 600.0,
+    "messages": 2293,
+    "plan_changes": 18,
+    "model_calls": 1574,
+    "call_latency_s_median": 0.33149870845954865,
+    "finish_reasons": {
+      "stop": 1574
+    },
+    "by_kind": {
+      "ack": {
+        "count": 342,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.07665681059444296
+      },
+      "plan": {
+        "count": 342,
+        "size_bytes_median": 360.5,
+        "size_bytes_p95": 396.0,
+        "iat_s_median": 0.0834641334441244
+      },
+      "report": {
+        "count": 1503,
+        "size_bytes_median": 419.0,
+        "size_bytes_p95": 504.0,
+        "iat_s_median": 0.23025496704032378
+      },
+      "tool_call": {
+        "count": 53,
+        "size_bytes_median": 328.0,
+        "size_bytes_p95": 330.4,
+        "iat_s_median": 3.92515014682575
+      },
+      "tool_result": {
+        "count": 53,
+        "size_bytes_median": 539.0,
+        "size_bytes_p95": 721.2,
+        "iat_s_median": 3.8760972385309174
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n30_m1.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 30,
+    "duration": 600.0,
+    "messages": 5825,
+    "plan_changes": 21,
+    "model_calls": 4495,
+    "call_latency_s_median": 0.33196691586636007,
+    "finish_reasons": {
+      "stop": 4495
+    },
+    "by_kind": {
+      "ack": {
+        "count": 609,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.06596370616396996
+      },
+      "plan": {
+        "count": 609,
+        "size_bytes_median": 355.0,
+        "size_bytes_p95": 399.0,
+        "iat_s_median": 0.08332135519728467
+      },
+      "report": {
+        "count": 4339,
+        "size_bytes_median": 420.0,
+        "size_bytes_p95": 495.0,
+        "iat_s_median": 0.08626815358748274
+      },
+      "tool_call": {
+        "count": 134,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 331.0,
+        "iat_s_median": 1.2245953728595396
+      },
+      "tool_result": {
+        "count": 134,
+        "size_bytes_median": 540.5,
+        "size_bytes_p95": 709.4,
+        "iat_s_median": 1.24421590911345
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n30_m2.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 30,
+    "duration": 600.0,
+    "messages": 3645,
+    "plan_changes": 16,
+    "model_calls": 2639,
+    "call_latency_s_median": 0.33344399998895824,
+    "finish_reasons": {
+      "stop": 2639
+    },
+    "by_kind": {
+      "ack": {
+        "count": 464,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.05487486283917953
+      },
+      "plan": {
+        "count": 464,
+        "size_bytes_median": 362.0,
+        "size_bytes_p95": 386.0,
+        "iat_s_median": 0.06872617939603742
+      },
+      "report": {
+        "count": 2529,
+        "size_bytes_median": 420.0,
+        "size_bytes_p95": 511.0,
+        "iat_s_median": 0.1492711720469515
+      },
+      "tool_call": {
+        "count": 94,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 331.0,
+        "iat_s_median": 1.2522363128657474
+      },
+      "tool_result": {
+        "count": 94,
+        "size_bytes_median": 562.0,
+        "size_bytes_p95": 759.8,
+        "iat_s_median": 1.2402685163708895
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n30_m3.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 30,
+    "duration": 600.0,
+    "messages": 3468,
+    "plan_changes": 16,
+    "model_calls": 2446,
+    "call_latency_s_median": 0.3415032085031271,
+    "finish_reasons": {
+      "stop": 2446
+    },
+    "by_kind": {
+      "ack": {
+        "count": 464,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.06845961929658984
+      },
+      "plan": {
+        "count": 464,
+        "size_bytes_median": 358.0,
+        "size_bytes_p95": 389.84999999999997,
+        "iat_s_median": 0.08002502249701138
+      },
+      "report": {
+        "count": 2320,
+        "size_bytes_median": 422.0,
+        "size_bytes_p95": 525.0,
+        "iat_s_median": 0.1685290166832658
+      },
+      "tool_call": {
+        "count": 110,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 330.55,
+        "iat_s_median": 1.9865040860448175
+      },
+      "tool_result": {
+        "count": 110,
+        "size_bytes_median": 546.0,
+        "size_bytes_p95": 748.8,
+        "iat_s_median": 1.8879695267106058
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n30_m4.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 30,
+    "duration": 600.0,
+    "messages": 4521,
+    "plan_changes": 14,
+    "model_calls": 3544,
+    "call_latency_s_median": 0.3119567920002737,
+    "finish_reasons": {
+      "stop": 3544
+    },
+    "by_kind": {
+      "ack": {
+        "count": 406,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.0722737090344765
+      },
+      "plan": {
+        "count": 406,
+        "size_bytes_median": 363.0,
+        "size_bytes_p95": 379.75,
+        "iat_s_median": 0.0823495889806054
+      },
+      "report": {
+        "count": 3351,
+        "size_bytes_median": 412.0,
+        "size_bytes_p95": 513.5,
+        "iat_s_median": 0.11940022004009165
+      },
+      "tool_call": {
+        "count": 179,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 330.0,
+        "iat_s_median": 0.7951506578614769
+      },
+      "tool_result": {
+        "count": 179,
+        "size_bytes_median": 557.0,
+        "size_bytes_p95": 777.4,
+        "iat_s_median": 0.8267242691725301
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n30_m5.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 30,
+    "duration": 600.0,
+    "messages": 3232,
+    "plan_changes": 12,
+    "model_calls": 2472,
+    "call_latency_s_median": 0.32818843750101223,
+    "finish_reasons": {
+      "stop": 2472
+    },
+    "by_kind": {
+      "ack": {
+        "count": 348,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.07172190504388709
+      },
+      "plan": {
+        "count": 348,
+        "size_bytes_median": 364.0,
+        "size_bytes_p95": 385.0,
+        "iat_s_median": 0.08476530746375488
+      },
+      "report": {
+        "count": 2384,
+        "size_bytes_median": 418.0,
+        "size_bytes_p95": 515.0,
+        "iat_s_median": 0.16900254328777464
+      },
+      "tool_call": {
+        "count": 76,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 331.0,
+        "iat_s_median": 3.092588761864363
+      },
+      "tool_result": {
+        "count": 76,
+        "size_bytes_median": 556.5,
+        "size_bytes_p95": 753.0,
+        "iat_s_median": 3.0894404618637736
+      }
+    }
+  },
+  {
+    "trace": "data/primary_qwen25_7b_v3/llm_n30_m6.json",
+    "validated": true,
+    "model": "qwen2.5:7b",
+    "n": 30,
+    "duration": 600.0,
+    "messages": 3128,
+    "plan_changes": 15,
+    "model_calls": 2223,
+    "call_latency_s_median": 0.30817224999918835,
+    "finish_reasons": {
+      "stop": 2223
+    },
+    "by_kind": {
+      "ack": {
+        "count": 435,
+        "size_bytes_median": 288.0,
+        "size_bytes_p95": 288.0,
+        "iat_s_median": 0.06977486366208174
+      },
+      "plan": {
+        "count": 435,
+        "size_bytes_median": 361.0,
+        "size_bytes_p95": 399.0,
+        "iat_s_median": 0.0832243376705144
+      },
+      "report": {
+        "count": 2158,
+        "size_bytes_median": 407.0,
+        "size_bytes_p95": 472.0,
+        "iat_s_median": 0.16436467975199776
+      },
+      "tool_call": {
+        "count": 50,
+        "size_bytes_median": 329.0,
+        "size_bytes_p95": 330.0,
+        "iat_s_median": 4.176542632713591
+      },
+      "tool_result": {
+        "count": 50,
+        "size_bytes_median": 526.5,
+        "size_bytes_p95": 665.0999999999999,
+        "iat_s_median": 4.267367327986136
+      }
+    }
+  }
+]

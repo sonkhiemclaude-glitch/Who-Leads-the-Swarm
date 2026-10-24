@@ -1,0 +1,27 @@
+{
+  "environment": {
+    "python": "3.11.17",
+    "platform": "Linux-6.12.72-linuxkit-x86_64-with-glibc2.36",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.1",
+    "ns3": "3.44.post0"
+  },
+  "frozen_scientific_source_sha256": "a8537b8386e853f01030a6ed68945e7e000464b85cb76a76bf15e297a4b5bd55",
+  "model": "HistGradientBoostingClassifier",
+  "max_iter": 150,
+  "max_leaf_nodes": 31,
+  "l2_regularization": 1.0,
+  "class_weight": "balanced",
+  "seed": 2026,
+  "mission_folds": 4,
+  "lags": [
+    0,
+    1,
+    2
+  ],
+  "role_lag_stride": "one window, same UAV",
+  "hyperparameter_search": false,
+  "plan_sha256": "919db73ae2925c5f760b0651e83e1c5a14a399587899bb0d156c98ad3a81cd3d",
+  "evaluation_script_sha256": "b01128914ff30b907ca79c7c3671e0b036cc2380b7dd2a7bd53761f4ca198b95"
+}

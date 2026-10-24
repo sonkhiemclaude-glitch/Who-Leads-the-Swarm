@@ -1,0 +1,13 @@
+{
+  "tests_passed": 91,
+  "tests_skipped": 1,
+  "skip_reason": "ns-3 bindings unavailable on local macOS; completed simulator runs are included",
+  "python": "3.11.15",
+  "primary_statistics_verified": 769,
+  "supplement_statistics_verified": 183,
+  "primary_paired_intervals_verified": 5,
+  "supplement_paired_intervals_verified": 39,
+  "no_credentials_or_manuscript": true,
+  "reported_runs": 332,
+  "original_llm_traces": 24
+}

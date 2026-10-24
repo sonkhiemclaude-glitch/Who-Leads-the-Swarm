@@ -1,0 +1,17 @@
+{
+  "aggregate_means_and_t_intervals_verified": 769,
+  "paired_mean_differences_and_bootstrap_intervals_verified": 5,
+  "validated_traces": 24,
+  "model_calls": 45799,
+  "logical_messages": 60515,
+  "n_runs": 288,
+  "source_sha256": "a8537b8386e853f01030a6ed68945e7e000464b85cb76a76bf15e297a4b5bd55",
+  "config_hash": "aa66aeb2d565e70d",
+  "artifact_sha256": {
+    "metrics.csv": "cdbdb6aea46a5987cb47f4cbd3265c4a5e9194935d3cbcd8d637df49c10392cd",
+    "per_mission.csv": "cab5a82d83b69bbcc26a9604d8e56df497ac20feb5cf01de958e28d8c21f1fab",
+    "comparisons.csv": "66a9b54f12d4df37fcbcf81c1f120f2b411b673791766a79c083c20faf2b0cb9",
+    "provenance.json": "ebb0c1e05e683856d8e32178329502978deb2a1bf36230af7f9efb6dceb408be"
+  },
+  "scope": "Recomputed all aggregate means/intervals and paired means from saved per-mission results; not an independent simulator or attacker reimplementation."
+}

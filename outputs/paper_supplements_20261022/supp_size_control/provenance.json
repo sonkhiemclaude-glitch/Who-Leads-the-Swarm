@@ -1,0 +1,69 @@
+{
+ "experiment": "supp_size_control",
+ "config_hash": "b804cb4a419169bb",
+ "synthetic": false,
+ "provenance_label": "simulation output (backend=ns3, traces=llm)",
+ "backend": "ns3",
+ "trace_source": "llm",
+ "n_runs": 24,
+ "run_code_versions": [
+  "0.2.0"
+ ],
+ "source_sha256": "a8537b8386e853f01030a6ed68945e7e000464b85cb76a76bf15e297a4b5bd55",
+ "config": {
+  "experiment": {
+   "name": "supp_size_control",
+   "output_dir": "outputs/paper_supplements_20261022/supp_size_control",
+   "seed": 2026,
+   "backend": "ns3",
+   "jobs": 2
+  },
+  "data": {
+   "trace_source": "llm",
+   "root": "data/size_control_20261022",
+   "pattern": "llm_n{n}_m{mission}.json"
+  },
+  "llm": {
+   "endpoint": "http://127.0.0.1:11434/v1",
+   "model": "qwen2.5:7b",
+   "temperature": 0.7,
+   "max_tokens": 1536,
+   "latency_scale": 0.2,
+   "report_llm_prob": 1.0,
+   "timeout_s": 180,
+   "structured_outputs": true
+  },
+  "scenario": {
+   "n": 20,
+   "duration": 600,
+   "speed": 15,
+   "area": 800,
+   "mobility": "gm",
+   "monitors": "quad",
+   "routing": "olsr"
+  },
+  "grid": [
+   {
+    "defense": "none",
+    "n_missions": 12
+   },
+   {
+    "defense": "full",
+    "budget": 0.2,
+    "n_missions": 12
+   }
+  ],
+  "evaluation": {
+   "bootstrap": 10000,
+   "comparisons": []
+  }
+ },
+ "environment": {
+  "python": "3.11.17",
+  "platform": "Linux-6.12.72-linuxkit-x86_64-with-glibc2.36",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.1",
+  "ns3": "3.44.post0"
+ }
+}
