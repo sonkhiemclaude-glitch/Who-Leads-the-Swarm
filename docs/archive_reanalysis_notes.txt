@@ -1,0 +1,24 @@
+Archived-run diagnostic boundaries
+
+This analysis uses existing ns-3 outcomes; it does not implement or validate a
+new distributed protocol. The frozen mapping.py docstring's local-information
+wording must be read with this correction: one replay engine sees positions
+and a shared endpoint-energy ledger. It atomically admits cover events; no
+wireless receive-credit exchange is implemented. Rejected candidates are not
+network packet drops. Ledger charges are not refunded after lost reception.
+
+Original logical message IDs are assigned anew when handover messages are
+inserted. The diagnostic aligns the unchanged trace hash and ordered original
+message kinds/send times instead of assuming IDs match across policies.
+
+Receiving outgoing and return proxy datagrams is not proof of adequate state
+serialization or execution success. The scheduled role mapping is unaffected
+by those reception outcomes. Reassignment schedules also differ between
+rotation-only and full policies, so their difference is not a rate-matched
+causal effect of cover alone.
+
+Per-UAV quantiles pool dependent UAV/mission values descriptively. Inferential
+intervals use mission summaries and remain conditional, exploratory, and
+unadjusted for multiple comparisons. Ledger utilization is distinct from
+measured radio increments, which also reflect routing, overhearing, and
+changed original-traffic paths.

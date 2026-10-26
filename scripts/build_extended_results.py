@@ -59,15 +59,15 @@ fig,axs=plt.subplots(1,2,figsize=(8.3,3.35),layout='constrained')
 plotkeys=['rot_b0','cover_uniform_b0.2','cover_uniform_b1','cover_targeted_b0.2','cover_targeted_b1','full_b0.05','full_b0.2','full_b1','const_b0.2','const_b1'];codes=['R','U.2','U1','T.2','T1','F.05','F.2','F1','C.2','C1']
 for ax,metric,title in zip(axs,['role_acc_h30','plan_f1'],['(a) Role at 30 s','(b) Plan-change F1']):
  for key,code in zip(plotkeys,codes):
-  x=vals(key+SC,'dE_j_mean');y=vals(key+SC,metric)*100;color=C[1] if key.startswith('full') else C[2] if key.startswith('const') else C[0];ax.errorbar(x.mean(),y.mean(),xerr=ci(x),yerr=ci(y),fmt='s' if key.startswith('const') else 'o',color=color,ms=4,alpha=.85,lw=.7,capsize=1);ax.annotate(code,(x.mean(),y.mean()),xytext=({'T1':(5,7),'F1':(5,-10),'C.2':(-7,-10)}.get(code,(4,3)) if metric=='plan_f1' else (4,3)),textcoords='offset points',fontsize=7)
+  x=vals(key+SC,'dE_j_mean');y=vals(key+SC,metric)*100;color=C[1] if key.startswith('full') else C[2] if key.startswith('const') else C[0];ax.errorbar(x.mean(),y.mean(),xerr=ci(x),yerr=ci(y),fmt='s' if key.startswith('const') else 'o',color=color,ms=4,alpha=.85,lw=.7,capsize=1);ax.annotate(code,(x.mean(),y.mean()),xytext=({'T1':(5,7),'F1':(5,-10),'C.2':(-7,-10)}.get(code,(4,3)) if metric=='plan_f1' else {'T.2':(-14,-12),'U.2':(-4,10),'T1':(-14,-12),'C.2':(3,10),'U1':(5,-10)}.get(code,(4,3))),textcoords='offset points',fontsize=7)
  ax.set_xlabel('Measured incremental energy (J/UAV)');ax.set_ylabel('Attacker score (%)');label(ax,title);ax.grid(alpha=.16);ax.set_xscale('symlog',linthresh=.08);ax.set_xlim(-.04,6);ax.set_xticks([0,.1,1,5],['0','0.1','1','5'])
 save(fig,'measured_energy_tradeoffs')
 # Routing costs with per-mission spread.
 fig,axs=plt.subplots(1,3,figsize=(8.3,3.25),sharey=True,layout='constrained');routing=[('No defense / OLSR','none_b0_olsr'),('Full / OLSR','full_b0.2_olsr'),('Any-hop / OLSR','full_anyhop_b0.2_olsr'),('No defense / AODV','none_b0_aodv'),('Full / AODV','full_b0.2_aodv'),('Any-hop / AODV','full_anyhop_b0.2_aodv')]
-for ax,metric,title,scale in zip(axs,['pdr','lat_ms_p95','bcast_fps'],['(a) Delivery ratio (%)','(b) Delivered-packet p95 (ms)','(c) Broadcast frames/s'],[100,1,1]):
+for ax,metric,title,scale in zip(axs,['pdr','lat_ms_p95','bcast_fps'],['(a) Delivery','(b) Tail latency','(c) Broadcast load'],[100,1,1]):
  for i,(name,key) in enumerate(routing):
   x=vals(key+'_n20_v15_gm_quad',metric)*scale;ax.scatter(x,i+np.linspace(-.15,.15,len(x)),s=11,alpha=.4,color=C[1] if 'anyhop' in key else C[0]);ax.plot(np.median(x),i,'|',ms=12,color='black')
- ax.set_yticks(range(6),[x[0] for x in routing]);label(ax,title);axes(ax)
+ ax.set_yticks(range(6),[x[0] for x in routing]);ax.set_xlabel({'pdr':'Delivery ratio (%)','lat_ms_p95':'Delivered-packet p95 (ms)','bcast_fps':'Observed frames/s'}[metric]);label(ax,title);axes(ax)
 axs[0].invert_yaxis();axs[1].set_xscale('symlog',linthresh=1);save(fig,'routing_costs')
 # Architecture schematic: drawn in vector form from the implemented pipeline.
 fig,ax=plt.subplots(figsize=(8.3,3.55));ax.set_xlim(0,12);ax.set_ylim(0,5);ax.axis('off')

@@ -66,6 +66,20 @@ python scripts/verify_extended_results.py
 
 The verification script independently recomputes all 28 new aggregate means/intervals, 28 feature-control bootstrap intervals and 48 deployment/metric bootstrap intervals. The core simulation source remains unchanged.
 
+## Archived-run utility and cost diagnostics
+
+The additional archived-data analysis reads 168 hash-verified existing records (11 OLSR and 3 AODV settings, 12 missions each). It adds no network simulations, LLM calls or classifier fits.
+
+```sh
+python scripts/analyze_archived_delivery_cost.py
+python scripts/plot_archived_delivery_cost.py
+python scripts/verify_archived_delivery_cost.py
+```
+
+`outputs/archive_reanalysis_20261026/` separates original coordination delivery from added handover traffic, reports network receipt of 918 scheduled payload pairs, and reconstructs per-UAV admitted-cover ledger charges alongside measured paired radio increments. Original-message kinds/send times and input trace hashes match the baseline. Ledger maxima match saved metadata. `validation/primary_run_input_hashes.json` provides the raw-record hashes without requiring a Drive account.
+
+Payload reception is not successful state migration: role mappings remain open-loop. Rotation-only and full policies have different realized transition counts (138 versus 130 in the 12 default OLSR missions), so their score difference is not a rate-matched causal cover effect. Per-UAV percentiles describe 240 dependent UAV/mission values per setting, not 240 independent samples. The new numerical summaries are exploratory; original simulated runs remain 332.
+
 ## Tests
 
 ```sh

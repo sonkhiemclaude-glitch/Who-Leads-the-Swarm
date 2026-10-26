@@ -1,0 +1,11 @@
+{
+  "original_summary_means_and_t_intervals": 168,
+  "handover_summary_means_and_t_intervals": 28,
+  "paired_bootstrap_intervals": 96,
+  "descriptive_quantiles": 114,
+  "independent_vectorized_raw_run_probes": 18,
+  "total_payload_pairs": 918,
+  "new_simulations": 0,
+  "new_model_fits": 0,
+  "scope": "Saved-record consistency, not independent simulator or migration-protocol validation."
+}
